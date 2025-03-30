@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabor y Tradición - Contacto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ESTILOS GENERALES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* BARRA DE NAVEGACIÓN */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo a {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #e67e22;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+    .nav-links li a {
+      font-weight: 600;
+      position: relative;
+    }
+    .nav-links li a:hover {
+      color: #e67e22;
+    }
+    .nav-links li a.active {
+      color: #e67e22;
+    }
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #e67e22;
+      transition: width 0.3s;
+    }
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+    .nav-icons {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-icons a {
+      font-size: 1.3rem;
+      transition: all 0.3s;
+    }
+    .nav-icons a:hover {
+      color: #e67e22;
+      transform: scale(1.1);
+    }
+    
+    /* FORMULARIO DE CONTACTO */
+    .contact-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    .contact-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .contact-header h1 {
+      font-size: 2.5rem;
+      color: #e67e22;
+      margin-bottom: 1rem;
+    }
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background: #e67e22;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .submit-btn:hover {
+      background: #d35400;
+    }
+    
+    /* INFO DE CONTACTO */
+    .contact-info {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+    .info-card {
+      flex: 1;
+      min-width: 200px;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: all 0.3s;
+    }
+    .info-card:hover {
+      transform: translateY(-5px);
+    }
+    .info-card i {
+      font-size: 2rem;
+      color: #e67e22;
+      margin-bottom: 1rem;
+    }
+    
+    /* BOTÓN REGRESAR */
+    .back-button {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: #e67e22;
+      color: white;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: 2px solid #e67e22;
+    }
+    .btn:hover {
+      background: transparent;
+      color: #e67e22;
+    }
+    
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      transition: all 0.3s;
+    }
+    .social-icons a:hover {
+      color: #e67e22;
+    }
+    
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
+      .nav-links {
+        margin: 1rem 0;
+      }
+      .contact-info {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">Sabor y Tradición</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="acerca-de.html">Nosotros</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="#"><i class="fas fa-user"></i></a>
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="contact-container">
+    <section class="contact-header">
+      <h1>Contáctanos</h1>
+      <p>¿Tienes preguntas? Escríbenos y te responderemos pronto</p>
+    </section>
+
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono (opcional)</label>
+        <input type="tel" id="telefono">
+      </div>
+      <div class="form-group">
+        <label for="mensaje">Tu mensaje</label>
+        <textarea id="mensaje" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Enviar Mensaje</button>
+    </form>
+
+    <div class="contact-info">
+      <div class="info-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Dirección</h3>
+        <p>Calle Sabores #123, CDMX</p>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-phone"></i>
+        <h3>Teléfono</h3>
+        <p>+52 55 1234 5678</p>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p>contacto@saborytradicion.com</p>
+      </div>
+    </div>
+
+    <!-- Botón de regreso -->
+    <div class="back-button">
+      <a href="index.html" class="btn"><i class="fas fa-arrow-left"></i> Regresar al Inicio</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2023 Sabor y Tradición</p>
+  </footer>
+</body>
+</html>
